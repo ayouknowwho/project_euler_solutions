@@ -10,7 +10,7 @@
 #
 # Prints the solution 23514624000
 
-number_string=("73167176531330624919225119674426574742355349194934"
+NUMBER_STRING = ("73167176531330624919225119674426574742355349194934"
     "96983520312774506326239578318016984801869478851843"
     "85861560789112949495459501737958331952853208805511"
     "12540698747158523863050715693290963295227443043557"
@@ -38,7 +38,7 @@ maximum_chunk_product = 0
 best_chunk = str()
 
 while last_digit <= 1000:
-    current_chunk = number_string[first_digit - 1:last_digit]
+    current_chunk = NUMBER_STRING[first_digit - 1:last_digit]
     current_chunk_product = 1
     for digit in current_chunk:
         current_chunk_product *= int(digit)
@@ -47,5 +47,5 @@ while last_digit <= 1000:
         best_chunk = current_chunk
     first_digit += 1
     last_digit += 1
-    ♥
+
 print(maximum_chunk_product)
